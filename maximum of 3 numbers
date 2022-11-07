@@ -1,0 +1,72 @@
+#include <iostream>
+
+//Program to find out the largest among the three given numbers using function template
+
+using namespace std;
+
+template<class T>
+
+T greatest(Tx, Ty, Tz){
+if(x>y){
+    if(x>z){
+            return x;
+    }
+    else{
+
+        return z;
+
+    }
+}
+else if(y>x){
+        if(y>z){
+            return y;
+
+        }
+        else{
+            return z;
+
+        }
+
+
+
+}
+
+}
+int main()
+{
+int choice;
+int a,b,c;
+float x,y,z;
+double p,q,r;
+char option;
+
+do{
+    cout<<"Find the greatest numbers"<<endl;
+    cout<<"1. Among integer numbers"<<endl;
+    cout<<"2. Among float numbers"<<endl;
+    cout<<"3. Among double numbers"<<endl;
+
+    cin>>choice;
+
+    switch(choice){
+    case 1:
+        cout<<"Enter three Integer numbers"<<endl;
+        cin>>a>>b>>c;
+        cout<<"The greatest integer is "greatest(a,b,c)<<endl;
+    case 2:
+        cout<<"Enter three floating numbers"<<endl;
+        cin>>x>>y>>z;
+        cout<<"The greatest float number is "greatest(a,b,c)<<endl;
+    case 3:
+        cout<<"Enter three double numbers"<<endl;
+        cin>>p>>q>>r;
+        cout<<"The greatest float number is "greatest(p,q,r)<<endl;
+
+    }
+
+
+cout<<"Do you want to continue (y/n)"<<endl;
+cin>>option;
+}while(option=='y' || option=='Y');
+return 0;
+}
